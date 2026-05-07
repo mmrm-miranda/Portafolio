@@ -28,7 +28,7 @@ const imageVariants = {
   },
 };
 
-const MARQUEE_TEXT = "INGENIERÍA INFORMÁTICA  ✦  CIBERSEGURIDAD  ✦  CIENCIA DE DATOS  ✦  DESARROLLO WEB  ✦  INTELIGENCIA ARTIFICIAL  ✦  DESAROLLO MOVIL  ✦";
+const MARQUEE_TEXT = "INGENIERÍA INFORMÁTICA  ✦  CIBERSEGURIDAD  ✦  CIENCIA DE DATOS  ✦  DESARROLLO WEB  ✦  INTELIGENCIA ARTIFICIAL  ✦  ";
 const SCROLLING_STRIP = Array(4).fill(MARQUEE_TEXT).join(" ");
 
 export default function HeroSection() {
@@ -37,47 +37,47 @@ export default function HeroSection() {
   return (
     <section id="hero" className="w-full flex flex-col relative bg-[#FFF0F5] dark:bg-[#F0D9E4] transition-colors duration-500">
       
-      {/* PANTALLA PRINCIPAL */}
       <motion.div 
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative w-full h-[100vh] min-h-[700px] bg-white dark:bg-[#16131F] overflow-hidden flex flex-col justify-between transition-colors duration-500"
+        className="relative w-full h-[100vh] min-h-[650px] bg-white dark:bg-[#16131F] overflow-hidden flex flex-col justify-between transition-colors duration-500"
       >
         
-        {/* TEXTO GIGANTE DE FONDO (MIRIAM) */}
+        {/* TEXTO DE FONDO - Escala suave para móvil */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
           <motion.h1 
             variants={itemVariants}
-            className="text-[clamp(10rem,28vw,38rem)] font-black text-[#F0D9E4]/20 dark:text-[#F0D9E4]/5 whitespace-nowrap tracking-tighter select-none leading-[0.8] mt-16 transition-colors duration-500"
+            className="text-[clamp(5rem,20vw,38rem)] font-black text-[#F0D9E4]/60 dark:text-[#F0D9E4]/10 whitespace-nowrap tracking-tighter select-none leading-none transition-colors duration-500"
           >
             MIRIAM
           </motion.h1>
         </div>
 
-        {/* TEXTOS DE PRIMER PLANO (Z-30) */}
-        <div className="absolute inset-0 w-full max-w-[1400px] mx-auto pointer-events-none z-30">
+        {/* TEXTOS SUPERIORES - Escalonados en móvil */}
+        <div className="absolute inset-0 w-full max-w-[1400px] mx-auto pointer-events-none z-10 px-6">
           
-          <motion.h2 variants={itemVariants} className="absolute top-[12%] md:top-[18%] left-[5%] md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-2xl md:text-7xl font-bold tracking-tight pointer-events-auto drop-shadow-sm transition-all">
-            {greeting || "Buenas Días"}
+          <motion.h2 variants={itemVariants} className="absolute top-[10%] md:top-[18%] left-[6%] md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-2xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
+            {greeting || "Buenas Noches"}
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute top-[12%] md:top-[18%] right-[5%] md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-2xl md:text-7xl font-bold tracking-tight pointer-events-auto drop-shadow-sm transition-all">
+          <motion.h2 variants={itemVariants} className="absolute top-[15%] md:top-[18%] right-[6%] md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-2xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
             Yo Soy
           </motion.h2>
 
-          <motion.h2 variants={itemVariants} className="absolute bottom-[10%] md:bottom-[10%] left-[6%] md:left-10 text-[#4A3F4B] dark:text-[#4A3F4B] text-5xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-all">
+          {/* TEXTOS INFERIORES - Distribuidos para evitar solapamiento */}
+          <motion.h2 variants={itemVariants} className="absolute bottom-[18%] md:bottom-[10%] left-[6%] md:left-10 text-[#4A3F4B] dark:text-[#4A3F4B] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md">
             Miranda
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute bottom-[10%] md:bottom-[10%] right-[6%] md:right-10 text-[#4A3F4B] dark:text-[#4A3F4B] text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-all">
-            Rodríguez<br/>Morales
+          <motion.h2 variants={itemVariants} className="absolute bottom-[8%] md:bottom-[10%] right-[6%] md:right-10 text-[#4A3F4B] dark:text-[#4A3F4B] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md">
+            Rodríguez<br className="hidden md:block"/> Morales
           </motion.h2>
 
         </div>
 
-        {/* FOTO (Z-20) */}
-        <div className="absolute bottom-0 left-0 w-full h-[80%] flex justify-center items-end pointer-events-none z-20">
+        {/* FOTO - Ajuste de altura para no tapar los textos inferiores */}
+        <div className="absolute bottom-0 left-0 w-full h-[70%] md:h-[80%] flex justify-center items-end pointer-events-none z-20">
           <motion.img
             variants={imageVariants}
             src={fotoHero}
@@ -88,7 +88,7 @@ export default function HeroSection() {
 
       </motion.div>
 
-      {/* FRANJA ANIMADA */}
+      {/* RESTO DEL COMPONENTE (Franja y Bio) IGUAL... */}
       <div className="w-full h-[50px] bg-[#C1A0AC] dark:bg-[#806C79] relative z-30 flex items-center overflow-hidden border-b-2 border-white dark:border-[#16131F] transition-colors duration-500">
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
@@ -111,11 +111,10 @@ export default function HeroSection() {
                 <p className="text-[#C1A0AC] text-sm tracking-[0.3em] uppercase font-bold">Sobre mi perfil</p>
               </div>
               <p className="text-[#4A3F4B] dark:text-white text-2xl md:text-4xl font-light leading-snug transition-colors duration-500">
-                Soy <span className="font-bold text-[#C1A0AC] dark:text-[#F0D9E4]">estudiante de ingeniería informática</span> con especialidad en 
-                Ciencia de datos.
+                Soy <span className="font-bold text-[#C1A0AC] dark:text-[#F0D9E4]">estudiante de ingeniería informática</span> con especialidad en Ciencia de datos.
               </p>
               <p className="text-[#806C79] text-lg md:text-xl font-light leading-relaxed max-w-2xl">
-                Enfocada en ciberseguridad, desarrollo móvil, desarrollo web y entrenamiento de IA.
+                Enfocada en ciberseguridad, desarrollo móvil y entrenamiento de IA.
               </p>
             </div>
 
