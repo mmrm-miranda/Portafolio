@@ -1,0 +1,36 @@
+/* src/styles/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables CSS globales (modo oscuro por defecto) */
+:root {
+  --bg:         #16131F;
+  --bg-card:    rgba(22, 19, 31, 0.7);
+  --border:     rgba(240, 217, 228, 0.15);
+  --text:       #F0D9E4;
+  --text-muted: #806C79;
+  --accent:     #C1A0AC;
+  --accent-dark:#4A3F4B;
+}
+
+/* Modo claro — se activa con class="light" en <html> */
+.light {
+  --bg:         #F0D9E4;
+  --bg-card:    rgba(240, 217, 228, 0.8);
+  --border:     rgba(74, 63, 75, 0.2);
+  --text:       #16131F;
+  --text-muted: #4A3F4B;
+  --accent:     #806C79;
+}
+
+/* Clase glass reutilizable */
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); }
