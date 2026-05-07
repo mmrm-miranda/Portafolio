@@ -45,35 +45,32 @@ export default function HeroSection() {
         className="relative w-full h-[100vh] min-h-[700px] bg-white dark:bg-[#16131F] overflow-hidden flex flex-col justify-between transition-colors duration-500"
       >
         
-        {/* TEXTO GIGANTE DE FONDO (MIRIAM) - ESTÉTICA ORIGINAL RETENIDA */}
+        {/* TEXTO GIGANTE DE FONDO (MIRIAM) */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
           <motion.h1 
             variants={itemVariants}
-            className="text-[clamp(10rem,28vw,38rem)] font-black leading-[0.8] mt-16 transition-colors duration-500 tracking-tighter select-none whitespace-nowrap
-                       {/* Color sutil retenido */}
-                       text-[#F0D9E4]/20 dark:text-[#F0D9E4]/5"
+            className="text-[clamp(10rem,28vw,38rem)] font-black text-[#F0D9E4]/20 dark:text-[#F0D9E4]/5 whitespace-nowrap tracking-tighter select-none leading-[0.8] mt-16 transition-colors duration-500"
           >
             MIRIAM
           </motion.h1>
         </div>
 
-        {/* CONTENEDOR DE TEXTOS DE PRIMER PLANO - ¡AHORA Z-30! */}
+        {/* TEXTOS DE PRIMER PLANO (Z-30) */}
         <div className="absolute inset-0 w-full max-w-[1400px] mx-auto pointer-events-none z-30">
           
-          <motion.h2 variants={itemVariants} className="absolute top-[18%] left-[6%] md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto drop-shadow-sm transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute top-[12%] md:top-[18%] left-[5%] md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-2xl md:text-7xl font-bold tracking-tight pointer-events-auto drop-shadow-sm transition-all">
             {greeting || "Buenas Días"}
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute top-[18%] right-[6%] md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto drop-shadow-sm transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute top-[12%] md:top-[18%] right-[5%] md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-2xl md:text-7xl font-bold tracking-tight pointer-events-auto drop-shadow-sm transition-all">
             Yo Soy
           </motion.h2>
 
-          {/* NOMBRE Y APELLIDOS - AJUSTE DE POSICIÓN MÓVIL Y VISIBILIDAD (Asegurado por Z-30) */}
-          <motion.h2 variants={itemVariants} className="absolute bottom-[15%] md:bottom-[10%] left-[6%] md:left-10 text-[#4A3F4B] dark:text-[#4A3F4B] text-5xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-all">
+          <motion.h2 variants={itemVariants} className="absolute bottom-[10%] md:bottom-[10%] left-[6%] md:left-10 text-[#4A3F4B] dark:text-[#4A3F4B] text-5xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-all">
             Miranda
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute bottom-[15%] md:bottom-[10%] right-[6%] md:right-10 text-[#4A3F4B] dark:text-[#4A3F4B] text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-all">
+          <motion.h2 variants={itemVariants} className="absolute bottom-[10%] md:bottom-[10%] right-[6%] md:right-10 text-[#4A3F4B] dark:text-[#4A3F4B] text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-all">
             Rodríguez<br/>Morales
           </motion.h2>
 
