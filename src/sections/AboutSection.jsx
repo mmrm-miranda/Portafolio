@@ -26,7 +26,7 @@ const AboutSection = () => {
                   </div>
                   
                   <div className="text-center mt-2">
-                      <p className="text-[#C1A0AC] text-[10px] font-bold tracking-[0.25em] uppercase mb-1.5">Residencia</p>
+                      <p className="text-[#C1A0AC] text-[10px] font-bold tracking-[0.25em] uppercase mb-1.5">Mi residencia</p>
                       <p className="text-[#806C79] text-sm tracking-widest font-light">
                         Guadalupe Victoria<br/>Durango, México
                       </p>
@@ -40,7 +40,7 @@ const AboutSection = () => {
                     <h3 className="text-[#4A3F4B] dark:text-[#FAFAFA] text-4xl lg:text-[3.5rem] font-light tracking-wide leading-tight mb-4 transition-colors duration-500">
                       Miriam Miranda <br className="hidden lg:block"/>Rodríguez Morales
                     </h3>
-                    <p className="text-[#C1A0AC] dark:text-[#F0D9E4] text-lg lg:text-2xl tracking-wide font-medium transition-colors duration-500">
+                    <p className="text-[#e0bcc9] dark:text-[#F0D9E4] text-lg lg:text-2xl tracking-wide font-medium transition-colors duration-500">
                       Ingeniería Informática | Inteligencia de Mercados & Data Science
                     </p>
                  </div>
@@ -50,9 +50,9 @@ const AboutSection = () => {
                        <p className="text-[#C1A0AC] text-xs uppercase tracking-[0.2em] font-bold mb-4 flex items-center justify-center lg:justify-start gap-2">
                          <span className="w-4 h-[1px] bg-[#C1A0AC]"></span> Educación
                        </p>
-                       <p className="text-[#4A3F4B] dark:text-[#FAFAFA] text-xl font-light leading-relaxed tracking-wide transition-colors duration-500">
-                          <strong className="font-medium text-[#4A3F4B] dark:text-white">Instituto Tecnológico Superior</strong><br/>
-                          <span className="text-[#806C79] text-lg">de la región de los llanos 2022-2027</span>
+                       <p className="text-[#917d93] dark:text-[#FAFAFA] text-xl font-light leading-relaxed tracking-wide transition-colors duration-500">
+                          <strong className="font-medium text-[#4A3F4B] dark:text-white">Instituto Tecnológico Superior de la región de los llanos</strong><br/>
+                          <span className="text-[#806C79] text-lg"> 2022-2027</span>
                        </p>
                     </div>
 

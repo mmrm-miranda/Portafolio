@@ -45,7 +45,7 @@ export default function HeroSection() {
       >
         
         {/* TEXTO DE FONDO - Escala suave para móvil */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+        <div className="absolute inset-0 flex items-start md:items-center justify-center pointer-events-none z-0 pt-[18vh] md:pt-0">
           <motion.h1 
             variants={itemVariants}
             className="text-[clamp(5rem,20vw,38rem)] font-black text-[#F0D9E4]/60 dark:text-[#F0D9E4]/10 whitespace-nowrap tracking-tighter select-none leading-none transition-colors duration-500"
@@ -77,7 +77,7 @@ export default function HeroSection() {
         </div>
 
         {/* FOTO - Ajuste de altura para no tapar los textos inferiores */}
-        <div className="absolute bottom-0 left-0 w-full h-[70%] md:h-[80%] flex justify-center items-end pointer-events-none z-20">
+        <div className="absolute bottom-0 left-0 w-full h-[70%] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
           <motion.img
             variants={imageVariants}
             src={fotoHero}
@@ -113,7 +113,7 @@ export default function HeroSection() {
               <p className="text-[#4A3F4B] dark:text-white text-2xl md:text-4xl font-light leading-snug transition-colors duration-500">
                 Soy <span className="font-bold text-[#C1A0AC] dark:text-[#F0D9E4]">estudiante de ingeniería informática</span> con especialidad en Ciencia de datos.
               </p>
-              <p className="text-[#806C79] text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+              <p className="text-[#e2c8d9] text-lg md:text-xl font-light leading-relaxed max-w-2xl">
                 Enfocada en ciberseguridad, desarrollo móvil y entrenamiento de IA.
               </p>
             </div>
