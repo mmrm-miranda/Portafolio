@@ -77,12 +77,12 @@ export default function HeroSection() {
         </div>
 
         {/* FOTO - Ajuste de altura para no tapar los textos inferiores */}
-        <div className="absolute bottom-0 left-0 w-full h-[85%] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
+        <div className="absolute bottom-0 left-0 w-full h-[75%] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
           <motion.img
             variants={imageVariants}
             src={fotoHero}
             alt="Miriam Rodríguez"
-            className="h-full w-auto object-contain object-bottom pointer-events-auto drop-shadow-2xl"
+            className="h-full w-auto object-contain object-center pointer-events-auto drop-shadow-2xl"
           />
         </div>
 
