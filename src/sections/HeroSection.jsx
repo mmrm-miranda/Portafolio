@@ -77,7 +77,7 @@ export default function HeroSection() {
         </div>
 
         {/* FOTO - Ajuste de altura para no tapar los textos inferiores */}
-        <div className="absolute bottom-0 left-0 w-full h-[75%] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
+        <div className="absolute bottom-[12%] md:bottom-0 left-0 w-full h-[75%] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
           <motion.img
             variants={imageVariants}
             src={fotoHero}
