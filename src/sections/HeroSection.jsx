@@ -114,7 +114,7 @@ export default function HeroSection() {
                 Soy <span className="font-bold text-[#C1A0AC] dark:text-[#F0D9E4]">estudiante de ingeniería informática</span> con especialidad en Ciencia de datos.
               </p>
               <p className="text-[#e2c8d9] text-lg md:text-xl font-light leading-relaxed max-w-2xl">
-                Enfocada en ciberseguridad, desarrollo móvil y entrenamiento de IA.
+                Enfocada en ciberseguridad, desarrollo móvil, desarrollo Web.
               </p>
             </div>
 

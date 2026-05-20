@@ -63,7 +63,7 @@ const AboutSection = () => {
                        <ul className="text-[#4A3F4B] dark:text-[#FAFAFA] text-xl font-light tracking-wide space-y-2 transition-colors duration-500">
                           <li>Español <span className="text-[#806C79] text-base ml-1">(Nativo)</span></li>
                           <li>Inglés <span className="text-[#806C79] text-base ml-1">(Nivel B1)</span></li>
-                          <li>Coreano <span className="text-[#806C79] text-base ml-1">(Básico)</span></li>
+                          <li>Coreano <span className="text-[#806C79] text-base ml-1">(TOPIK 2)</span></li>
                        </ul>
                     </div>
                  </div>
