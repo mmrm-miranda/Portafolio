@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import fotoPerfil from '../assets/images/foto-perfil.jpg'; 
 
 const AboutSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="w-full bg-[#FFF0F5] dark:bg-[#F0D9E4] pt-8 pb-16 px-[3%] flex justify-center transition-colors duration-500">
       
@@ -10,7 +13,7 @@ const AboutSection = () => {
         {/* LA CÁPSULA */}
         <div className="flex ml-8 md:ml-16 relative z-10 -mb-6">
           <div className="bg-white dark:bg-[#16131F] text-[#4A3F4B] dark:text-[#FAFAFA] text-sm md:text-base px-12 py-3 rounded-full font-bold tracking-[0.2em] uppercase border-[5px] border-[#C1A0AC] dark:border-[#F0D9E4] shadow-md transition-colors duration-500">
-            Sobre mi
+            {t("about.capsule")}
           </div>
         </div>
 
@@ -26,10 +29,8 @@ const AboutSection = () => {
                   </div>
                   
                   <div className="text-center mt-2">
-                      <p className="text-[#C1A0AC] text-[10px] font-bold tracking-[0.25em] uppercase mb-1.5">Mi residencia</p>
-                      <p className="text-[#806C79] text-sm tracking-widest font-light">
-                        Guadalupe Victoria<br/>Durango, México
-                      </p>
+                      <p className="text-[#C1A0AC] text-[10px] font-bold tracking-[0.25em] uppercase mb-1.5">{t("about.location.label")}</p>
+                      <p className="text-[#806C79] text-sm tracking-widest font-light" dangerouslySetInnerHTML={{ __html: t("about.location.text") }} />
                   </div>
               </div>
 
@@ -41,29 +42,29 @@ const AboutSection = () => {
                       Miriam Miranda <br className="hidden lg:block"/>Rodríguez Morales
                     </h3>
                     <p className="text-[#e0bcc9] dark:text-[#F0D9E4] text-lg lg:text-2xl tracking-wide font-medium transition-colors duration-500">
-                      Ingeniería Informática | Inteligencia de Mercados & Data Science
+                      {t("about.subtitle")}
                     </p>
                  </div>
 
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                        <p className="text-[#C1A0AC] text-xs uppercase tracking-[0.2em] font-bold mb-4 flex items-center justify-center lg:justify-start gap-2">
-                         <span className="w-4 h-[1px] bg-[#C1A0AC]"></span> Educación
+                         <span className="w-4 h-[1px] bg-[#C1A0AC]"></span> {t("about.education")}
                        </p>
                        <p className="text-[#917d93] dark:text-[#FAFAFA] text-xl font-light leading-relaxed tracking-wide transition-colors duration-500">
-                          <strong className="font-medium text-[#4A3F4B] dark:text-white">Instituto Tecnológico Superior de la región de los llanos</strong><br/>
-                          <span className="text-[#806C79] text-lg"> 2022-2027</span>
+                          <strong className="font-medium text-[#4A3F4B] dark:text-white">{t("about.institution")}</strong><br/>
+                          <span className="text-[#806C79] text-lg"> {t("about.period")}</span>
                        </p>
                     </div>
 
                     <div>
                        <p className="text-[#C1A0AC] text-xs uppercase tracking-[0.2em] font-bold mb-4 flex items-center justify-center lg:justify-start gap-2">
-                         <span className="w-4 h-[1px] bg-[#C1A0AC]"></span> Competencia Lingüística
+                         <span className="w-4 h-[1px] bg-[#C1A0AC]"></span> {t("about.languages")}
                        </p>
                        <ul className="text-[#4A3F4B] dark:text-[#FAFAFA] text-xl font-light tracking-wide space-y-2 transition-colors duration-500">
-                          <li>Español <span className="text-[#806C79] text-base ml-1">(Nativo)</span></li>
-                          <li>Inglés <span className="text-[#806C79] text-base ml-1">(Nivel B1)</span></li>
-                          <li>Coreano <span className="text-[#806C79] text-base ml-1">(TOPIK 2)</span></li>
+                          <li>{t("about.lang.spanish")} <span className="text-[#806C79] text-base ml-1">{t("about.lang.native")}</span></li>
+                          <li>{t("about.lang.english")} <span className="text-[#806C79] text-base ml-1">{t("about.lang.b1")}</span></li>
+                          <li>{t("about.lang.korean")} <span className="text-[#806C79] text-base ml-1">{t("about.lang.topik")}</span></li>
                        </ul>
                     </div>
                  </div>

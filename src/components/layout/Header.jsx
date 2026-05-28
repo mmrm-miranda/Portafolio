@@ -1,16 +1,18 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { useTheme } from '../../hooks/useTheme';
+import { useLanguage } from '../../context/LanguageContext';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navItems = [
-    { label: 'Sobre mí', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Proyectos', href: '#projects' },
-    { label: 'Formación', href: '#courses' },
-    { label: 'Contacto', href: '#contact' },
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.skills'), href: '#skills' },
+    { label: t('nav.projects'), href: '#projects' },
+    { label: t('nav.courses'), href: '#courses' },
+    { label: t('nav.contact'), href: '#contact' },
   ];
 
   const socialLinks = [
@@ -56,6 +58,15 @@ const Header = () => {
               </a>
             ))}
           </div>
+
+          <button 
+            onClick={toggleLanguage}
+            className={`relative w-[54px] h-[28px] md:w-[76px] md:h-[38px] rounded-full overflow-hidden transition-all duration-500 border-2 ${language === 'en' ? 'bg-[#2D2438] border-[#806C79]' : 'bg-[#FBCFE8] border-[#C1A0AC]'}`}
+          >
+            <div className={`absolute top-0.5 left-0.5 w-[20px] h-[20px] md:w-[28px] md:h-[28px] md:top-1 md:left-1 rounded-full flex items-center justify-center transition-transform duration-500 shadow-lg ${language === 'en' ? 'translate-x-[24px] md:translate-x-[38px] bg-[#806C79]' : 'translate-x-0 bg-white'}`}>
+              <span className="text-[9px] md:text-xs font-black tracking-tight leading-none">{language === 'es' ? 'ES' : 'EN'}</span>
+            </div>
+          </button>
 
           <button 
             onClick={toggleTheme}

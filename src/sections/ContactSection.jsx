@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { useLanguage } from "../context/LanguageContext";
 
 const contactLinks = [
   { icon: <FaGithub size={28}/>, href: "https://github.com/mmrm-miranda", label: "GitHub" },
@@ -8,6 +9,8 @@ const contactLinks = [
 ];
 
 export default function ContactSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="w-full bg-[#FFF0F5] dark:bg-[#F0D9E4] py-20 px-[5%] flex justify-center transition-colors duration-500">
       
@@ -17,7 +20,7 @@ export default function ContactSection() {
         {/* Cápsula de título */}
         <div className="flex justify-center relative z-10 -mb-6">
           <div className="bg-white dark:bg-[#16131F] text-[#4A3F4B] dark:text-[#FAFAFA] text-base md:text-lg px-16 py-4 rounded-full font-bold tracking-[0.25em] uppercase border-[5px] border-[#C1A0AC] dark:border-[#F0D9E4] shadow-lg transition-colors duration-500">
-            Contacto
+            {t("contact.capsule")}
           </div>
         </div>
 
@@ -29,8 +32,8 @@ export default function ContactSection() {
             {/* Encabezado visual[cite: 9] */}
             <div className="border-b border-[#C1A0AC]/30 dark:border-[#4A3F4B]/50 pb-12 w-full transition-colors duration-500">
               <h3 className="text-[#4A3F4B] dark:text-[#FAFAFA] text-5xl lg:text-[4.5rem] font-light tracking-tight leading-tight transition-colors duration-500">
-                ¿Tienes una idea? <br/>
-                <span className="font-black text-[#C1A0AC] dark:text-[#F0D9E4] uppercase tracking-tighter">Hagámosla realidad</span>
+                {t("contact.heading")} <br/>
+                <span className="font-black text-[#C1A0AC] dark:text-[#F0D9E4] uppercase tracking-tighter">{t("contact.cta")}</span>
               </h3>
             </div>
 
@@ -58,9 +61,7 @@ export default function ContactSection() {
               ))}
             </div>
 
-            <p className="text-[#806C79] dark:text-[#F0D9E4]/50 text-sm md:text-base font-medium tracking-widest uppercase opacity-80">
-              Disponible para colaborar en proyectos de <span className="text-[#C1A0AC]">ingeniería</span> y <span className="text-[#C1A0AC]">datos</span>
-            </p>
+            <p className="text-[#806C79] dark:text-[#F0D9E4]/50 text-sm md:text-base font-medium tracking-widest uppercase opacity-80" dangerouslySetInnerHTML={{ __html: t("contact.available") }} />
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { LanguageProvider } from "./context/LanguageContext";
 import { useTheme } from "./hooks/useTheme";
 import AboutSection from "./sections/AboutSection";
 import SkillsSection from "./sections/SkillsSection";
@@ -11,17 +12,18 @@ import HeroSection from './sections/HeroSection';
 
 function App() {
   return (
-    /* bg-theme-base es para que todo el fondo cambie */
-    <main className="bg-theme-base min-h-screen transition-colors duration-500 font-body">
-      <Header />
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <CoursesSection />
-      <ContactSection />
-      <Footer />
-    </main>
+    <LanguageProvider>
+      <main className="bg-theme-base min-h-screen transition-colors duration-500 font-body">
+        <Header />
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <CoursesSection />
+        <ContactSection />
+        <Footer />
+      </main>
+    </LanguageProvider>
   );
 }
 

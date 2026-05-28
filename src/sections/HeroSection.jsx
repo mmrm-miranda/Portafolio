@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useGreeting } from "../hooks/useGreeting";
+import { useLanguage } from "../context/LanguageContext";
 import fotoHero from "../assets/images/foto-hero.png";
 
 const containerVariants = {
@@ -28,11 +29,9 @@ const imageVariants = {
   },
 };
 
-const MARQUEE_TEXT = "INGENIERÍA INFORMÁTICA  ✦  CIBERSEGURIDAD  ✦  CIENCIA DE DATOS  ✦  DESARROLLO WEB  ✦  INTELIGENCIA ARTIFICIAL  ✦  ";
-const SCROLLING_STRIP = Array(4).fill(MARQUEE_TEXT).join(" ");
-
 export default function HeroSection() {
-  const { greeting } = useGreeting(); 
+  const { greeting } = useGreeting();
+  const { t } = useLanguage();
 
   return (
     <section id="hero" className="w-full flex flex-col relative bg-[#FFF0F5] dark:bg-[#F0D9E4] transition-colors duration-500">
@@ -58,11 +57,11 @@ export default function HeroSection() {
         <div className="absolute inset-0 w-full max-w-[1400px] mx-auto pointer-events-none z-10 px-6">
           
           <motion.h2 variants={itemVariants} className="absolute top-[10%] md:top-[18%] left-[6%] md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-2xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
-            {greeting || "Buenas Noches"}
+            {greeting || t("hero.greeting.evening")}
           </motion.h2>
           
           <motion.h2 variants={itemVariants} className="absolute top-[15%] md:top-[18%] right-[6%] md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-2xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
-            Yo Soy
+            {t("hero.yosoy")}
           </motion.h2>
 
           {/* TEXTOS INFERIORES - Distribuidos para evitar solapamiento */}
@@ -96,7 +95,7 @@ export default function HeroSection() {
           className="whitespace-nowrap flex items-center"
         >
           <span className="text-white dark:text-[#16131F] text-base font-bold tracking-[0.2em] opacity-90 transition-colors duration-500">
-            {SCROLLING_STRIP}
+            {t("hero.marquee")}
           </span>
         </motion.div>
       </div>
@@ -108,13 +107,11 @@ export default function HeroSection() {
             <div className="flex-1 flex flex-col gap-8 text-center lg:text-left">
               <div className="flex items-center gap-4 justify-center lg:justify-start">
                 <div className="w-16 h-[3px] bg-[#C1A0AC]"></div>
-                <p className="text-[#C1A0AC] text-sm tracking-[0.3em] uppercase font-bold">Sobre mi perfil</p>
+                <p className="text-[#C1A0AC] text-sm tracking-[0.3em] uppercase font-bold">{t("hero.bio.label")}</p>
               </div>
-              <p className="text-[#4A3F4B] dark:text-white text-2xl md:text-4xl font-light leading-snug transition-colors duration-500">
-                Soy <span className="font-bold text-[#C1A0AC] dark:text-[#F0D9E4]">estudiante de ingeniería informática</span> con especialidad en Ciencia de datos.
-              </p>
+              <p className="text-[#4A3F4B] dark:text-white text-2xl md:text-4xl font-light leading-snug transition-colors duration-500" dangerouslySetInnerHTML={{ __html: t("hero.bio.text") }} />
               <p className="text-[#e2c8d9] text-lg md:text-xl font-light leading-relaxed max-w-2xl">
-                Enfocada en ciberseguridad, desarrollo móvil, desarrollo Web.
+                {t("hero.bio.sub")}
               </p>
             </div>
 
@@ -133,7 +130,7 @@ export default function HeroSection() {
                     </div>
                     <div className="absolute bottom-0 w-full h-2.5 bg-[#FAFAFA] dark:bg-[#16131F] rounded-sm z-20 shadow-[0_-1px_2px_rgba(0,0,0,0.3)]"></div>
                 </div>
-                <span>Descargar CV</span>
+                <span>{t("hero.cv")}</span>
                 </a>
               
               <div className="flex items-center gap-3">
@@ -141,7 +138,7 @@ export default function HeroSection() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C1A0AC] opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-[#C1A0AC] dark:bg-[#F0D9E4]"></span>
                 </span>
-                <p className="text-[#806C79] text-xs tracking-widest uppercase font-bold">Disponible ahora</p>
+                <p className="text-[#806C79] text-xs tracking-widest uppercase font-bold">{t("hero.available")}</p>
               </div>
             </div>
           </div>

@@ -3,6 +3,14 @@
 // ¡La palabra 'export' es lo más importante aquí!
 export const coursesData = [
   {
+    id: 5,
+    title: "Introducción a la Ciberseguridad",
+    institution: "Cisco Networking Academy",
+    date: "Mayo, 2026",
+    duration: "6 horas",
+    description: "Introducción a los conceptos de ciberseguridad.",
+  },
+  {
     id: 1,
     title: "Desarrollo con IA: de 0 a Producción",
     institution: "BIG School",
@@ -34,5 +42,6 @@ export const coursesData = [
     duration: "15 horas",
     description: "Desarrollo y estructuración de páginas completas en HTML.",
   },
+  
   
 ];

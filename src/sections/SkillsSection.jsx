@@ -1,8 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 import { skillsCategories } from '../data/skills';
 
 const SkillsSection = () => {
+  const { t } = useLanguage();
+
+  const categoryTitleKey = (title) => {
+    const map = {
+      "Desarrollo Web": "skills.cat.web",
+      "Desarrollo Móvil": "skills.cat.mobile",
+      "Programación": "skills.cat.programming",
+      "IoT": "skills.cat.iot",
+      "Bases de datos": "skills.cat.databases",
+      "Herramientas": "skills.cat.tools",
+    };
+    return map[title] || title;
+  };
+
   return (
     <section id="skills" className="w-full bg-[#FFF0F5] dark:bg-[#F0D9E4] flex flex-col items-center transition-colors duration-500">
       
@@ -14,12 +29,10 @@ const SkillsSection = () => {
           <div className="flex flex-col gap-2 md:mb-4">
             <div className="flex items-center gap-4">
               <div className="w-2 h-8 bg-[#C1A0AC] rounded-full"></div>
-              <h2 className="text-[#4A3F4B] dark:text-[#FAFAFA] text-3xl md:text-4xl font-light tracking-wider uppercase transition-colors duration-500">
-                Habilidades <span className="font-bold text-[#C1A0AC] dark:text-[#F0D9E4]">Técnicas</span>
-              </h2>
+              <h2 className="text-[#4A3F4B] dark:text-[#FAFAFA] text-3xl md:text-4xl font-light tracking-wider uppercase transition-colors duration-500" dangerouslySetInnerHTML={{ __html: t("skills.title") }} />
             </div>
             <p className="text-[#806C79] text-xs md:text-sm tracking-[0.3em] uppercase ml-6 opacity-80">
-              Stack Tecnológico y Especialidades
+              {t("skills.subtitle")}
             </p>
           </div>
 
@@ -28,7 +41,7 @@ const SkillsSection = () => {
               
               <div className="flex items-center gap-6 justify-center md:justify-start">
                 <span className="text-[#C1A0AC] text-[10px] font-bold tracking-[0.4em] uppercase whitespace-nowrap">
-                  {category.title}
+                  {t(categoryTitleKey(category.title))}
                 </span>
                 <div className="w-full h-[1px] bg-gradient-to-r from-[#C1A0AC]/50 dark:from-[#4A3F4B]/50 to-transparent hidden md:block transition-colors duration-500"></div>
               </div>
