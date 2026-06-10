@@ -89,7 +89,7 @@ const ProjectsSection = () => {
                       {/* Imagen */}
                       <div className="w-full h-48 md:h-52 overflow-hidden bg-white dark:bg-[#16131F] shrink-0 border-b border-[#C1A0AC]/30 dark:border-[#4A3F4B]/50 transition-colors duration-500">
                         {project.image ? (
-                          <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                          <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top opacity-90 hover:opacity-100 transition-opacity" />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center text-[#806C79]">{t("projects.noimage")}</div>
                         )}

@@ -1,6 +1,7 @@
 import imgOnFire from '../assets/images/projects/onfire.png';
 import drump from '../assets/images/projects/drump.png';
 import musicia from '../assets/images/projects/musicia.png';
+import deredo from '../assets/images/projects/deredo.png';
 
 export const featuredProjects = [
   {
@@ -32,6 +33,16 @@ export const featuredProjects = [
     image: musicia, 
     repo: "https://github.com/mmrm-miranda/HTML",
     demo: "https://musicia-psuh.onrender.com/"
-  }
+  },
+  {
+    id: 4,
+    title: "Deredo",
+    description: "Aplicación movil de turismo, consumo local y venta local en Durango con una interfaz amable y fácil de usar, que permite a los usuarios descubrir lugares turísticos, restaurantes, tiendas y sentos turisticos neturales en Durango, fomentando el turismo y el consumo local.",
+    techStack: ["Flutter", "Google Claude", "API REST", "IA", "Dart"],
+    softSkills: ["Innovación", "Creatividad", "Adaptabilidad", "Trabajo en equipo", "Resolución de problemas"],
+    image: deredo, 
+    repo: "https://github.com/mmrm-miranda/DEREDOL",
+    demo: "#"
+  },
 
 ];
