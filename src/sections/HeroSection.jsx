@@ -40,7 +40,7 @@ export default function HeroSection() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative w-full h-[100vh] min-h-[650px] bg-white dark:bg-[#16131F] overflow-hidden flex flex-col justify-between transition-colors duration-500"
+        className="relative w-full h-[100svh] min-h-[650px] bg-white dark:bg-[#16131F] overflow-hidden flex flex-col justify-between transition-colors duration-500"
       >
         
         {/* TEXTO DE FONDO - Escala suave para móvil */}
@@ -56,27 +56,27 @@ export default function HeroSection() {
         {/* TEXTOS SUPERIORES - Escalonados en móvil */}
         <div className="absolute inset-0 w-full max-w-[1400px] mx-auto pointer-events-none z-10 px-6">
           
-          <motion.h2 variants={itemVariants} className="absolute top-[12%] md:top-[18%] left-[6%] md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute top-28 md:top-[18%] left-6 md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
             {greeting || t("hero.greeting.evening")}
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute top-[18%] md:top-[18%] right-[6%] md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute top-44 md:top-[18%] right-6 md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
             {t("hero.yosoy")}
           </motion.h2>
 
           {/* TEXTOS INFERIORES - Distribuidos para evitar solapamiento */}
-          <motion.h2 variants={itemVariants} className="absolute bottom-[14%] md:bottom-[10%] left-[6%] md:left-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute bottom-36 md:bottom-[10%] left-6 md:left-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-colors duration-500">
             Miranda
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute bottom-[6%] md:bottom-[10%] right-[6%] md:right-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute bottom-16 md:bottom-[10%] right-6 md:right-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-colors duration-500">
             Rodríguez<br className="hidden md:block"/> Morales
           </motion.h2>
 
         </div>
 
         {/* FOTO - Ajuste de altura para no tapar los textos inferiores */}
-        <div className="absolute bottom-[20%] md:bottom-0 left-0 w-full h-[55%] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
+        <div className="absolute top-1/2 -translate-y-1/2 md:top-auto md:translate-y-0 md:bottom-0 left-0 w-full h-[45svh] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
           <motion.img
             variants={imageVariants}
             src={fotoHero}
