@@ -106,7 +106,7 @@ const Header = () => {
       </div>
 
       {menuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40" onClick={() => setMenuOpen(false)}>
+        <div className="lg:hidden fixed inset-0 z-40 pointer-events-auto" onClick={() => setMenuOpen(false)}>
           <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
           
           <div 
