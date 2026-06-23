@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useGreeting } from "../hooks/useGreeting";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../context/useLanguage";
 import fotoHero from "../assets/images/foto-hero.png";
 
 const containerVariants = {
@@ -65,11 +65,11 @@ export default function HeroSection() {
           </motion.h2>
 
           {/* TEXTOS INFERIORES - Distribuidos para evitar solapamiento */}
-          <motion.h2 variants={itemVariants} className="absolute bottom-[18%] md:bottom-[10%] left-[6%] md:left-10 text-[#4A3F4B] dark:text-[#4A3F4B] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md">
+          <motion.h2 variants={itemVariants} className="absolute bottom-[18%] md:bottom-[10%] left-[6%] md:left-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-colors duration-500">
             Miranda
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute bottom-[8%] md:bottom-[10%] right-[6%] md:right-10 text-[#4A3F4B] dark:text-[#4A3F4B] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md">
+          <motion.h2 variants={itemVariants} className="absolute bottom-[8%] md:bottom-[10%] right-[6%] md:right-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-colors duration-500">
             Rodríguez<br className="hidden md:block"/> Morales
           </motion.h2>
 
@@ -91,11 +91,14 @@ export default function HeroSection() {
       <div className="w-full h-[50px] bg-[#C1A0AC] dark:bg-[#806C79] relative z-30 flex items-center overflow-hidden border-b-2 border-white dark:border-[#16131F] transition-colors duration-500">
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 250, repeat: Infinity, ease: "linear" }}
           className="whitespace-nowrap flex items-center"
         >
-          <span className="text-white dark:text-[#16131F] text-base font-bold tracking-[0.2em] opacity-90 transition-colors duration-500">
-            {t("hero.marquee")}
+          <span className="text-white dark:text-[#16131F] text-base font-bold opacity-90 transition-colors duration-500">
+            {Array(10).fill(t("hero.marquee").replace(/✦\s*$/, '').trim()).join(" ✦ ")} ✦ {/* Remueve diamante final si existe y une con diamantes */}
+          </span>
+          <span className="text-white dark:text-[#16131F] text-base font-bold opacity-90 transition-colors duration-500 ml-1">
+            {Array(10).fill(t("hero.marquee").replace(/✦\s*$/, '').trim()).join(" ✦ ")} ✦ 
           </span>
         </motion.div>
       </div>

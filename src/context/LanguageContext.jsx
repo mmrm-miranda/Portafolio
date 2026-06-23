@@ -1,14 +1,12 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useState } from 'react';
 
 const translations = {
   es: {
-    // Header
     "nav.about": "Sobre mí",
     "nav.skills": "Skills",
     "nav.projects": "Proyectos",
     "nav.courses": "Formación",
     "nav.contact": "Contacto",
-    // Hero
     "hero.greeting.morning": "Buenos Días",
     "hero.greeting.afternoon": "Buenas Tardes",
     "hero.greeting.evening": "Buenas Noches",
@@ -19,7 +17,6 @@ const translations = {
     "hero.bio.sub": "Enfocada en ciberseguridad, desarrollo móvil, desarrollo Web.",
     "hero.cv": "Descargar CV",
     "hero.available": "Disponible ahora",
-    // About
     "about.capsule": "Sobre mi",
     "about.location.label": "Mi residencia",
     "about.location.text": "Guadalupe Victoria<br/>Durango, México",
@@ -34,18 +31,18 @@ const translations = {
     "about.lang.b1": "(Nivel B1)",
     "about.lang.korean": "Coreano",
     "about.lang.topik": "(TOPIK 2)",
-    // Skills
     "skills.title": "Habilidades <span>Técnicas</span>",
     "skills.subtitle": "Stack Tecnológico y Especialidades",
+    "skills.capsule": "Skills",
     "skills.cat.web": "Desarrollo Web",
     "skills.cat.mobile": "Desarrollo Móvil",
     "skills.cat.programming": "Programación",
     "skills.cat.iot": "IoT",
     "skills.cat.databases": "Bases de datos",
     "skills.cat.tools": "Herramientas",
-    // Courses
     "courses.title": "Línea de <span>Formación</span>",
     "courses.subtitle": "Certificaciones y Especializaciones",
+    "courses.capsule": "Formación",
     "courses.1.title": "Desarrollo con IA: de 0 a Producción",
     "courses.1.desc": "Jornadas formativas para la integración y despliegue de Inteligencia Artificial en entornos de producción.",
     "courses.1.institution": "BIG School",
@@ -71,7 +68,6 @@ const translations = {
     "courses.5.institution": "Cisco Networking Academy",
     "courses.5.date": "Mayo, 2026",
     "courses.5.duration": "6 horas",
-    // Projects
     "projects.capsule": "Proyectos Destacados",
     "projects.subtitle": "Desarrollo, Innovación e Ingeniería",
     "projects.noimage": "Sin imagen",
@@ -96,14 +92,27 @@ const translations = {
     "projects.3.skill1": "Innovación",
     "projects.3.skill2": "Creatividad",
     "projects.3.skill3": "Adaptabilidad",
-    // Contact
+    "projects.4.title": "Deredo",
+    "projects.4.desc": "Aplicación movil de turismo, consumo local y venta local en Durango con una interfaz amable y fácil de usar, que permite a los usuarios descubrir lugares turísticos, restaurantes, tiendas y centros turísticos naturales en Durango, fomentando el turismo y el consumo local.",
+    "projects.4.skill1": "Innovación",
+    "projects.4.skill2": "Creatividad",
+    "projects.4.skill3": "Adaptabilidad",
+    "projects.4.skill4": "Trabajo en equipo",
+    "projects.4.skill5": "Resolución de problemas",
+    "projects.1.problem": "Los incendios forestales suelen detectarse demasiado tarde, provocando daños masivos y poniendo en riesgo vidas humanas. Además, la falta de datos climáticos en tiempo real dificulta la contención.",
+    "projects.1.solution": "Se desarrolló un sistema IoT autónomo con ESP32 que monitorea variables ambientales en tiempo real, alertando de forma temprana. Se integró una API REST para calcular la ruta más rápida y segura para los equipos de emergencia.",
+    "projects.2.problem": "Muchos creadores de música y aficionados carecen de herramientas accesibles e interactivas en línea para esbozar ritmos rápidos sin necesidad de instalar software complejo o pesado.",
+    "projects.2.solution": "Se construyó una interfaz intuitiva que mapea teclas a samples percusivos, optimizando la latencia de audio para permitir una experiencia de creación rítmica fluida y en tiempo real directamente en la web.",
+    "projects.3.problem": "La composición musical desde cero puede ser intimidante y requiere un alto nivel de conocimientos de teoría musical, lo que limita a muchas personas creativas sin formación formal.",
+    "projects.3.solution": "Se implementó un modelo de inteligencia artificial capaz de generar secuencias MIDI basándose en parámetros seleccionados por el usuario, democratizando la creación musical y sirviendo como herramienta de inspiración.",
+    "projects.4.problem": "Los turistas y locales de Durango a menudo desconocen los negocios locales y atractivos turísticos ocultos debido a la falta de una plataforma centralizada y fácil de usar para descubrirlos.",
+    "projects.4.solution": "Se diseñó y desarrolló una aplicación móvil con Flutter que centraliza puntos de interés y negocios locales. Se utilizó IA para recomendar rutas personalizadas, fomentando directamente el turismo y la economía local.",
+    "projects.4.badge": "🏆 Proyecto Ganador del Hackatón Hack Days Durango",
     "contact.capsule": "Contacto",
     "contact.heading": "¿Tienes una idea?",
     "contact.cta": "Hagámosla realidad",
     "contact.available": "Disponible para colaborar en proyectos de <span>ingeniería</span> y <span>datos</span>",
-    // Footer
     "footer.credit": "Diseñado y desarrollado por",
-    // Greeting
   },
   en: {
     "nav.about": "About me",
@@ -137,6 +146,7 @@ const translations = {
     "about.lang.topik": "(TOPIK 2)",
     "skills.title": "Technical <span>Skills</span>",
     "skills.subtitle": "Tech Stack & Specialties",
+    "skills.capsule": "Skills",
     "skills.cat.web": "Web Development",
     "skills.cat.mobile": "Mobile Development",
     "skills.cat.programming": "Programming",
@@ -145,6 +155,7 @@ const translations = {
     "skills.cat.tools": "Tools",
     "courses.title": "Education <span>Path</span>",
     "courses.subtitle": "Certifications & Specializations",
+    "courses.capsule": "Education",
     "courses.1.title": "AI Development: from 0 to Production",
     "courses.1.desc": "Training sessions for integrating and deploying Artificial Intelligence in production environments.",
     "courses.1.institution": "BIG School",
@@ -194,6 +205,22 @@ const translations = {
     "projects.3.skill1": "Innovation",
     "projects.3.skill2": "Creativity",
     "projects.3.skill3": "Adaptability",
+    "projects.4.title": "Deredo",
+    "projects.4.desc": "Mobile tourism, local consumption, and local sales app in Durango with a friendly and easy-to-use interface, allowing users to discover tourist spots, restaurants, stores, and natural tourist centers in Durango, promoting tourism and local consumption.",
+    "projects.4.skill1": "Innovation",
+    "projects.4.skill2": "Creativity",
+    "projects.4.skill3": "Adaptability",
+    "projects.4.skill4": "Teamwork",
+    "projects.4.skill5": "Problem Solving",
+    "projects.1.problem": "Forest fires are often detected too late, causing massive damage and putting human lives at risk. In addition, the lack of real-time weather data hinders containment efforts.",
+    "projects.1.solution": "An autonomous IoT system with ESP32 was developed to monitor environmental variables in real-time, providing early warnings. A REST API was integrated to calculate the fastest and safest route for emergency teams.",
+    "projects.2.problem": "Many music creators and enthusiasts lack accessible, interactive online tools to sketch quick beats without installing complex or heavy software.",
+    "projects.2.solution": "An intuitive interface was built that maps keys to percussive samples, optimizing audio latency to allow a fluid, real-time rhythm creation experience directly on the web.",
+    "projects.3.problem": "Composing music from scratch can be intimidating and requires a high level of music theory knowledge, limiting many creative individuals without formal training.",
+    "projects.3.solution": "An artificial intelligence model capable of generating MIDI sequences based on user-selected parameters was implemented, democratizing music creation and serving as an inspiration tool.",
+    "projects.4.problem": "Tourists and locals in Durango are often unaware of local businesses and hidden tourist attractions due to the lack of a centralized, easy-to-use platform to discover them.",
+    "projects.4.solution": "A mobile application was designed and developed with Flutter that centralizes points of interest and local businesses. AI was used to recommend personalized routes, directly promoting tourism and the local economy.",
+    "projects.4.badge": "🏆 Winning Project of the Hack Days Durango Hackathon",
     "contact.capsule": "Contact",
     "contact.heading": "Got an idea?",
     "contact.cta": "Let's make it happen",
@@ -202,7 +229,7 @@ const translations = {
   }
 };
 
-const LanguageContext = createContext();
+export const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'es');
@@ -222,10 +249,4 @@ export function LanguageProvider({ children }) {
       {children}
     </LanguageContext.Provider>
   );
-}
-
-export function useLanguage() {
-  const ctx = useContext(LanguageContext);
-  if (!ctx) throw new Error('useLanguage must be used within LanguageProvider');
-  return ctx;
 }

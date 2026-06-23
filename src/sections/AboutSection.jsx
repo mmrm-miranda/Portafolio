@@ -1,5 +1,4 @@
-import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../context/useLanguage';
 import fotoPerfil from '../assets/images/foto-perfil.jpg'; 
 
 const AboutSection = () => {

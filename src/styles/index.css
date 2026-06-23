@@ -1,10 +1,24 @@
-/* src/styles/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Variables CSS globales (modo oscuro por defecto) */
 :root {
+  --bg:         #F0D9E4;
+  --bg-card:    rgba(240, 217, 228, 0.8);
+  --border:     rgba(74, 63, 75, 0.2);
+  --text:       #16131F;
+  --text-muted: #4A3F4B;
+  --accent:     #806C79;
+  --accent-dark:#4A3F4B;
+
+  --color-primary:  #C1A0AC;
+  --color-muted:    #806C79;
+  --color-accent:   #C1A0AC;
+  --color-border:   rgba(193, 160, 172, 0.4);
+  --color-surface:  #F7EBF0;
+}
+
+.dark {
   --bg:         #16131F;
   --bg-card:    rgba(22, 19, 31, 0.7);
   --border:     rgba(240, 217, 228, 0.15);
@@ -12,19 +26,14 @@
   --text-muted: #806C79;
   --accent:     #C1A0AC;
   --accent-dark:#4A3F4B;
+
+  --color-primary:  #C1A0AC;
+  --color-muted:    #806C79;
+  --color-accent:   #C1A0AC;
+  --color-border:   rgba(74, 63, 75, 0.5);
+  --color-surface:  #16131F;
 }
 
-/* Modo claro — se activa con class="light" en <html> */
-.light {
-  --bg:         #F0D9E4;
-  --bg-card:    rgba(240, 217, 228, 0.8);
-  --border:     rgba(74, 63, 75, 0.2);
-  --text:       #16131F;
-  --text-muted: #4A3F4B;
-  --accent:     #806C79;
-}
-
-/* Clase glass reutilizable */
 .glass {
   background: var(--bg-card);
   backdrop-filter: blur(12px);
@@ -34,3 +43,29 @@
 
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); }
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}

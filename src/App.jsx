@@ -1,5 +1,4 @@
 import { LanguageProvider } from "./context/LanguageContext";
-import { useTheme } from "./hooks/useTheme";
 import AboutSection from "./sections/AboutSection";
 import SkillsSection from "./sections/SkillsSection";
 import ProjectsSection from "./sections/ProjectsSection";
@@ -17,8 +16,8 @@ function App() {
         <Header />
         <HeroSection />
         <AboutSection />
-        <SkillsSection />
         <ProjectsSection />
+        <SkillsSection />
         <CoursesSection />
         <ContactSection />
         <Footer />

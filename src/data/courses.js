@@ -1,4 +1,7 @@
 // src/data/courses.js
+import certIntroCiber from '../assets/certificates/intro-ciberseguridad.pdf';
+import certDesarrollo from '../assets/certificates/desarrollo.pdf';
+import certCiberseguridad from '../assets/certificates/ciberseguridad.pdf';
 
 // ¡La palabra 'export' es lo más importante aquí!
 export const coursesData = [
@@ -9,6 +12,7 @@ export const coursesData = [
     date: "Mayo, 2026",
     duration: "6 horas",
     description: "Introducción a los conceptos de ciberseguridad.",
+    certificate: certIntroCiber,
   },
   {
     id: 1,
@@ -17,6 +21,7 @@ export const coursesData = [
     date: "14 de Abril, 2026",
     duration: "6 horas",
     description: "Jornadas formativas para la integración y despliegue de Inteligencia Artificial en entornos de producción.",
+    certificate: certDesarrollo,
   },
   {
     id: 2,
@@ -25,6 +30,7 @@ export const coursesData = [
     date: "13 de Abril, 2026",
     duration: "6 horas",
     description: "Técnicas de detección de vulnerabilidades y defensa digital aplicadas a la ciberseguridad.",
+    certificate: certCiberseguridad,
   },
   {
     id: 3,
