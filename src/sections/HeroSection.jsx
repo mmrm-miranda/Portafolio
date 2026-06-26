@@ -44,10 +44,10 @@ export default function HeroSection() {
       >
         
         {/* TEXTO DE FONDO - Escala suave para móvil */}
-        <div className="absolute inset-0 flex items-start md:items-center justify-center pointer-events-none z-0 pt-[30vh] md:pt-0">
+        <div className="absolute inset-0 flex items-start md:items-center justify-center pointer-events-none z-0 pt-[15vh] md:pt-0">
           <motion.h1 
             variants={itemVariants}
-            className="text-[clamp(5.5rem,20vw,38rem)] font-black text-[#F0D9E4]/60 dark:text-[#F0D9E4]/10 whitespace-nowrap tracking-tighter select-none leading-none transition-colors duration-500"
+            className="text-[clamp(8rem,25vw,38rem)] font-black text-[#F0D9E4]/60 dark:text-[#F0D9E4]/10 whitespace-nowrap tracking-tighter select-none leading-none transition-colors duration-500"
           >
             MIRIAM
           </motion.h1>
@@ -65,23 +65,23 @@ export default function HeroSection() {
           </motion.h2>
 
           {/* TEXTOS INFERIORES - Distribuidos en esquinas */}
-          <motion.h2 variants={itemVariants} className="absolute bottom-[10%] md:bottom-[10%] left-4 md:left-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute bottom-[12%] md:bottom-[10%] left-4 md:left-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-colors duration-500">
             Miranda
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute bottom-[10%] md:bottom-[10%] right-4 md:right-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute bottom-[12%] md:bottom-[10%] right-4 md:right-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-colors duration-500">
             Rodríguez<br /> Morales
           </motion.h2>
 
         </div>
 
-        {/* FOTO - Ajuste de altura para no tapar los textos inferiores */}
-        <div className="absolute top-[52%] -translate-y-1/2 md:top-auto md:translate-y-0 md:bottom-0 left-0 w-full h-[60svh] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
+        {/* FOTO - Anclada abajo para evitar espacio sobrante */}
+        <div className="absolute bottom-0 left-0 w-full h-[65svh] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
           <motion.img
             variants={imageVariants}
             src={fotoHero}
             alt="Miriam Rodríguez"
-            className="h-full w-auto object-contain object-center pointer-events-auto drop-shadow-2xl"
+            className="h-full w-auto object-contain object-bottom pointer-events-auto drop-shadow-2xl"
           />
         </div>
 
