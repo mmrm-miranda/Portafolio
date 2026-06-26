@@ -53,23 +53,23 @@ export default function HeroSection() {
           </motion.h1>
         </div>
 
-        {/* TEXTOS SUPERIORES - Escalonados en móvil */}
-        <div className="absolute inset-0 w-full max-w-[1400px] mx-auto pointer-events-none z-10 px-6">
+        {/* TEXTOS SUPERIORES - Distribuidos en esquinas para móvil y desktop */}
+        <div className="absolute inset-0 w-full max-w-[1400px] mx-auto pointer-events-none z-10 px-4 md:px-6">
           
-          <motion.h2 variants={itemVariants} className="absolute top-24 md:top-[18%] left-6 md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute top-[22%] md:top-[18%] left-4 md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-2xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
             {greeting || t("hero.greeting.evening")}
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute top-36 md:top-[18%] right-6 md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute top-[22%] md:top-[18%] right-4 md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-2xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
             {t("hero.yosoy")}
           </motion.h2>
 
-          {/* TEXTOS INFERIORES - Distribuidos para evitar solapamiento */}
-          <motion.h2 variants={itemVariants} className="absolute bottom-32 md:bottom-[10%] left-6 md:left-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-colors duration-500">
+          {/* TEXTOS INFERIORES - Distribuidos en esquinas */}
+          <motion.h2 variants={itemVariants} className="absolute bottom-[20%] md:bottom-[10%] left-4 md:left-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-colors duration-500">
             Miranda
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute bottom-10 md:bottom-[10%] right-6 md:right-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute bottom-[20%] md:bottom-[10%] right-4 md:right-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-3xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-colors duration-500">
             Rodríguez<br /> Morales
           </motion.h2>
 
