@@ -44,10 +44,10 @@ export default function HeroSection() {
       >
         
         {/* TEXTO DE FONDO - Escala suave para móvil */}
-        <div className="absolute inset-0 flex items-start md:items-center justify-center pointer-events-none z-0 pt-[18vh] md:pt-0">
+        <div className="absolute inset-0 flex items-start md:items-center justify-center pointer-events-none z-0 pt-[25vh] md:pt-0">
           <motion.h1 
             variants={itemVariants}
-            className="text-[clamp(5rem,20vw,38rem)] font-black text-[#F0D9E4]/60 dark:text-[#F0D9E4]/10 whitespace-nowrap tracking-tighter select-none leading-none transition-colors duration-500"
+            className="text-[clamp(5.5rem,20vw,38rem)] font-black text-[#F0D9E4]/60 dark:text-[#F0D9E4]/10 whitespace-nowrap tracking-tighter select-none leading-none transition-colors duration-500"
           >
             MIRIAM
           </motion.h1>
@@ -56,27 +56,27 @@ export default function HeroSection() {
         {/* TEXTOS SUPERIORES - Escalonados en móvil */}
         <div className="absolute inset-0 w-full max-w-[1400px] mx-auto pointer-events-none z-10 px-6">
           
-          <motion.h2 variants={itemVariants} className="absolute top-28 md:top-[18%] left-6 md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute top-24 md:top-[18%] left-6 md:left-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
             {greeting || t("hero.greeting.evening")}
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute top-44 md:top-[18%] right-6 md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute top-36 md:top-[18%] right-6 md:right-10 text-[#C1A0AC] dark:text-[#F0D9E4] text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight pointer-events-auto transition-colors duration-500">
             {t("hero.yosoy")}
           </motion.h2>
 
           {/* TEXTOS INFERIORES - Distribuidos para evitar solapamiento */}
-          <motion.h2 variants={itemVariants} className="absolute bottom-36 md:bottom-[10%] left-6 md:left-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-colors duration-500">
+          <motion.h2 variants={itemVariants} className="absolute bottom-32 md:bottom-[10%] left-6 md:left-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter pointer-events-auto drop-shadow-md transition-colors duration-500">
             Miranda
           </motion.h2>
           
-          <motion.h2 variants={itemVariants} className="absolute bottom-16 md:bottom-[10%] right-6 md:right-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-colors duration-500">
-            Rodríguez<br className="hidden md:block"/> Morales
+          <motion.h2 variants={itemVariants} className="absolute bottom-10 md:bottom-[10%] right-6 md:right-10 text-[#4A3F4B] dark:text-[#F0D9E4] text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-right pointer-events-auto drop-shadow-md transition-colors duration-500">
+            Rodríguez<br /> Morales
           </motion.h2>
 
         </div>
 
         {/* FOTO - Ajuste de altura para no tapar los textos inferiores */}
-        <div className="absolute top-1/2 -translate-y-1/2 md:top-auto md:translate-y-0 md:bottom-0 left-0 w-full h-[45svh] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
+        <div className="absolute top-[52%] -translate-y-1/2 md:top-auto md:translate-y-0 md:bottom-0 left-0 w-full h-[50svh] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
           <motion.img
             variants={imageVariants}
             src={fotoHero}
