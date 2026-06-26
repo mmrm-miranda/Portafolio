@@ -76,7 +76,7 @@ export default function HeroSection() {
         </div>
 
         {/* FOTO - Anclada abajo para evitar espacio sobrante */}
-        <div className="absolute bottom-0 left-0 w-full h-[75svh] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
+        <div className="absolute bottom-0 left-0 w-full h-[82svh] md:h-[80%] flex justify-center items-end pointer-events-none z-0 md:z-20">
           <motion.img
             variants={imageVariants}
             src={fotoHero}
